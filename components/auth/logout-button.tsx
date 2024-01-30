@@ -11,7 +11,7 @@ interface LoginButtonProps {
   asChild?: boolean
 }
 
-export const LoginButton = ({
+export const LogoutButton = ({
   children,
   mode = 'redirect',
   asChild,
@@ -28,7 +28,6 @@ export const LoginButton = ({
         <DialogTrigger asChild={asChild}>{children}</DialogTrigger>
         <DialogContent className="p-0 w-auto bg-transparent border-none">
           <LoginForm />
-          {/* <div>Login Form</div> */}
         </DialogContent>
       </Dialog>
     )
