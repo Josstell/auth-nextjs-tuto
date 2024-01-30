@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { LoginForm } from '@/components/auth/login-form'
+import { logout } from '@/actions/logout'
 
 interface LoginButtonProps {
   children: React.ReactNode
@@ -19,7 +20,7 @@ export const LogoutButton = ({
   const router = useRouter()
 
   const onClick = () => {
-    router.push('/auth/login')
+    logout()
   }
 
   if (mode === 'modal') {
